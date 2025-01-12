@@ -35,14 +35,14 @@ const Bmi = () => {
     }
 
     return (
-        <div className='flex items-center justify-center h-[80vh] w-full border border-solid border-gray-500'>
+        <div className='flex items-center justify-center h-[80vh] w-screen border border-solid border-gray-500'>
             <form onSubmit={calBmi}
                 className=''>
 
                 <h1 className='font-bold text-2xl text-center mb-5'>BMI CALCULATOR</h1>
                 <div className='mb-5'>
                     <label className='text-lg text-center font-medium mb-4 px-2'>Weight(lbs)
-                        <input className='border border-solid border-gray-400 rounded-md mx-5 px-0 w-full'
+                        <input className='border border-solid border-gray-400 rounded-md mx-5 px-0 w-4/5'
                             type="number"
                             placeholder="Enter your weight"
                             value={weight}
@@ -53,7 +53,7 @@ const Bmi = () => {
 
                 <div className='mb-7'>
                     <label className='text-lg text-center font-medium mb-4 px-2'>Height (inches)
-                        <input className='border border-solid border-gray-400 rounded-md mx-5 px-0 w-full'
+                        <input className='border border-solid border-gray-400 rounded-md mx-5 px-0 w-4/5'
                             type="number"
                             placeholder="Enter your height"
                             value={height}
@@ -62,13 +62,13 @@ const Bmi = () => {
                     </label>
                 </div>
 
-                <div className='flex items-center justify-evenly'>
+                <div className='flex items-center justify-evenly object-contain'>
                     <button className='rounded-2xl px-10 text-white bg-blue-600 h-9 active:scale-90' type="submit">SUBMIT</button>
 
                     <button className='rounded-2xl px-10 text-white bg-blue-600 h-9 active:scale-90' type="button" onClick={reset}>RESET</button>
                 </div>
 
-                <div>
+                <div >
                     <h3 className='font-semibold text-xl text-center mt-4'>Your BMI is: {bmi}</h3>
                     <p className='font-semibold text-center text-sm mt-2 '>{message}</p>
                 </div>
